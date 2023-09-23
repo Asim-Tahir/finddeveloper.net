@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/assets/styles/global.css";
 import type { Metadata } from "next";
 import { markPro } from "@/assets/fonts";
 
