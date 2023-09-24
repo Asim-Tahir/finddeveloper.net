@@ -1,6 +1,11 @@
-import "@/assets/styles/global.css";
-import type { Metadata } from "next";
+import "@/assets/styles/normalize.css";
+import "@/assets/styles/variables.css";
+import "@/assets/styles/globals.css";
+import "@/assets/styles/layers/index.css";
+
 import { markPro } from "@/assets/fonts";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Find Developer",
