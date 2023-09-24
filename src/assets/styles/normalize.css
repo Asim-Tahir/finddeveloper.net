@@ -349,3 +349,11 @@ template {
 [hidden] {
   display: none;
 }
+
+/**
+ * Remove outline when focus is visible.
+ */
+
+:focus-visible {
+  outline: none;
+}
