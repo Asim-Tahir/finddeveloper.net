@@ -5,14 +5,14 @@ import "@/assets/styles/layers/index.css";
 
 import { markPro } from "@/assets/fonts";
 
-import type { Metadata } from "next";
+import type { Metadata, NextLayoutProps } from "next";
 
 export const metadata: Metadata = {
   title: "Find Developer",
   description: "find your teammate",
 };
 
-export default function RootLayout({ children }: React.PropsWithChildren) {
+export default function RootLayout({ children }: NextLayoutProps): JSX.Element {
   return (
     <html lang="en">
       <body className={markPro.className}>{children}</body>
