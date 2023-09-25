@@ -11,7 +11,7 @@ import heroTextImage from "@/assets/svgs/hero-text.svg";
 import heroSearchButtonIcon from "@/assets/svgs/hero-search-button-icon.svg";
 import heroSearchInputIcon from "@/assets/svgs/hero-search-input-icon.svg";
 
-export default function Hero(): JSX.Element {
+export default function HeroSection(): JSX.Element {
   function onSearchFormSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
