@@ -1,7 +1,4 @@
-import "@/assets/styles/normalize.css";
-import "@/assets/styles/variables.css";
 import "@/assets/styles/globals.css";
-import "@/assets/styles/layers/index.css";
 
 import { markPro } from "@/assets/fonts";
 
