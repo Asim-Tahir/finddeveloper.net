@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "label": "UX designer"
+  },
+  {
+    "id": 2,
+    "label": "UI designer"
+  },
+  {
+    "id": 3,
+    "label": "Front-end developer"
+  },
+  {
+    "id": 4,
+    "label": "Back-end developer"
+  },
+  {
+    "id": 5,
+    "label": "iOS developer"
+  },
+  {
+    "id": 6,
+    "label": "Product Manager"
+  },
+  {
+    "id": 7,
+    "label": "Data Scientist"
+  },
+  {
+    "id": 8,
+    "label": "QA Tester (Quality Assurance Tester)"
+  }
+]
