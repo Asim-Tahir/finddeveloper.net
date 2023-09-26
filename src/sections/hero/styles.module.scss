@@ -56,7 +56,6 @@
 
     display: block;
 
-    vertical-align: middle;
     text-align: center;
 
     aspect-ratio: 353 / 48;
@@ -195,7 +194,6 @@
     
     .heroSearchButton {
       background-color: var(--cursed-black);
-      transition: all ease-in-out 250ms;
     }
   }
 }
