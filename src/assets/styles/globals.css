@@ -1,9 +1,0 @@
-@import url("./normalize.css") layer(reset);
-@import url("./variables.css") layer(variables);
-@import url("./utilities.css") layer(utilities);
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}

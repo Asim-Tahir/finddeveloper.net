@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 import heroBackgroundImage from "@/assets/svgs/hero-background.svg";
 import logoImage from "@/assets/svgs/logo.svg";
