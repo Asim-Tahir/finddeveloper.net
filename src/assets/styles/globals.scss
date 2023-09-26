@@ -1,0 +1,24 @@
+@use "sass:meta";
+
+@layer reset {
+  /* TODO: fix to work with CSS cascade layers */
+  @import "~normalize.css";
+
+  @include meta.load-css("reset");
+}
+
+@layer variables {
+  @layer colors {
+    @include meta.load-css("colors");
+  }
+}
+
+@layer utilities {
+  @include meta.load-css("utilities");
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

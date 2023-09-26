@@ -1,0 +1,14 @@
+/**
+  * Remove anchor underline and initial color
+  */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+  * Remove outline when focus is visible.
+  */
+:focus-visible {
+  outline: none;
+}
