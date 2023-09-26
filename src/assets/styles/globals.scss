@@ -8,7 +8,9 @@
 }
 
 @layer variables {
-  @include meta.load-css("variables");
+  @layer colors {
+    @include meta.load-css("colors");
+  }
 }
 
 @layer utilities {
