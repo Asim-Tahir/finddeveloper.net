@@ -1,10 +1,9 @@
 :root {
-  --color-opacity: 1;
-  --white: rgba(255 255 255 / var(--color-opacity));
-  --pebble-beach: rgba(128 130 133 / var(--color-opacity));
-  --secret-of-mana: rgba(73 96 229 / var(--color-opacity));
-  --pointed-rock: rgba(102 103 104 / var(--color-opacity));
-  --cursed-black: rgba(18 18 18 / var(--color-opacity));
-  --silver: rgba(191 191 191 / var(--color-opacity));
-  --off-black: rgba(48 48 48 / var(--color-opacity));
+  --white: rgb(255, 255, 255);
+  --pebble-beach: rgb(128, 130, 133);
+  --secret-of-mana: rgb(73, 96, 229);
+  --pointed-rock: rgb(102, 103, 104);
+  --cursed-black: rgb(18, 18, 18);
+  --silver: rgb(191, 191, 191);
+  --off-black: rgb(48, 48, 48);
 }
