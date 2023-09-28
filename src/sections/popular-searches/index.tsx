@@ -4,14 +4,14 @@ import { useRef, useState } from "react";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
 
-export interface SearchRecord {
+export interface PopularSearchRecord {
   id: number;
   label: string;
 }
 
 export interface PopularSearchesSectionProps {
   title: string;
-  searches: Array<SearchRecord>;
+  searches: Array<PopularSearchRecord>;
 }
 
 export default function PopularSearchesSection({
