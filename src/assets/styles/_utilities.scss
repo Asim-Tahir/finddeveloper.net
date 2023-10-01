@@ -1,3 +1,13 @@
 .rounded-full {
   border-radius: 9999px;
 }
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+}

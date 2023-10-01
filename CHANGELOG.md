@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2023-10-01
+
+### Features:
+
+- add `featured-job-postings` section ([#9](https://github.com/Asim-Tahir/finddeveloper.net/issues/9))
+- add `@/*` alias in both `webpack` and `turbopack` config
+- add `line-clamp-1` utility css class
+- add `swiper` as dependency
+
+### Refactors:
+
+- use module import without tilde(~) in `.scss` files
+- remove `~/*` alias from `tsconfig.json`
+- fix `swiper` version to `v10.3.1`
+- extend typing of next config for `sassOptions` option
+- change all elements `box-sizing` as `border-box`
+
 ## [0.1.0] - 2023-09-28
 
 ### Features:
