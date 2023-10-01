@@ -1,10 +1,6 @@
 @use "sass:meta";
 
 @layer reset {
-  /* TODO: fix to work with CSS cascade layers */
-  // @include meta.load-css("normalize.css");
-  @import "normalize.css";
-
   @include meta.load-css("reset");
 }
 
@@ -17,6 +13,8 @@
 @layer utilities {
   @include meta.load-css("utilities");
 }
+
+@layer sections.hero, sections.popular-searches, sections.featured-job-postings, sections.action-cards;
 
 @media (prefers-color-scheme: dark) {
   html {
