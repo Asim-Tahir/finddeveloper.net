@@ -24,6 +24,13 @@ const nextConfig = {
 
     return config;
   },
+  experimental: {
+    turbo: {
+      resolveAlias: {
+        "@": fileURLToPath(new URL("./src", import.meta.url)),
+      },
+    },
+  },
 };
 
 export default nextConfig;
