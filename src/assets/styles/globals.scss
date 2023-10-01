@@ -2,7 +2,8 @@
 
 @layer reset {
   /* TODO: fix to work with CSS cascade layers */
-  @import "~normalize.css";
+  // @include meta.load-css("normalize.css");
+  @import "normalize.css";
 
   @include meta.load-css("reset");
 }
