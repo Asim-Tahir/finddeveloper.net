@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2023-10-01
+
+### Features:
+
+- add `action-cards` section ([#13](https://github.com/Asim-Tahir/finddeveloper.net/issues/13))
+- add the black color with opacity 30% with the name `--black-30`
+- add global types for sampled static image data
+- add `*.d.ts` to include next-env types in `tsconfig`
+
+### Refactor:
+
+- change html lang attribute as `tr`
+- remove `normalize.css` dependency
+- reduce reset css to keep only essential styles
+- revert: "refactor: use module import without tilde", because without tilde import not working
+- use styles without module css in homepage
+
 ## [0.2.0] - 2023-10-01
 
 ### Features:

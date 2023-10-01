@@ -1,4 +1,4 @@
-import styles from "./page.module.scss";
+import "./page.scss";
 
 import Hero from "@/sections/hero";
 import PopularSearches, {
@@ -7,13 +7,14 @@ import PopularSearches, {
 import FeaturedJobPostings, {
   type JobPostingRecord,
 } from "@/sections/featured-job-postings";
+import ActionCards from "@/sections/action-cards";
 
 import popularSearches from "@/mocks/popular-searches.json";
 import featuredJobPostings from "@/mocks/featured-job-postings.json";
 
 export default function HomePage() {
   return (
-    <main className={styles.main}>
+    <main className="homepage">
       <Hero />
       <PopularSearches
         title="Popüler aramalar"
@@ -22,6 +23,7 @@ export default function HomePage() {
       <FeaturedJobPostings
         jobPostings={featuredJobPostings as Array<JobPostingRecord>}
       />
+      <ActionCards />
     </main>
   );
 }

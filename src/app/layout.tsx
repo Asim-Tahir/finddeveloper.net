@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: NextLayoutProps): JSX.Element {
   return (
-    <html lang="en">
+    <html lang="tr">
       <body className={markPro.className}>{children}</body>
     </html>
   );

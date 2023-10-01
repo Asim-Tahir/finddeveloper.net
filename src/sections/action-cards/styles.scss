@@ -1,0 +1,28 @@
+@layer sections.action-cards {
+  .action-cards {
+    margin-inline: auto;
+
+    padding-inline: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 71.25rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .action-cards {
+      flex-direction: row;
+      column-gap: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .action-cards {
+      padding-inline: 0;
+    }
+  }
+}
