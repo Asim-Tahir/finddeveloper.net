@@ -1,7 +1,9 @@
 import styles from "./page.module.scss";
 
 import Hero from "@/sections/hero";
-import PopularSearches, { PopularSearchRecord } from "@/sections/popular-searches";
+import PopularSearches, {
+  type PopularSearchRecord,
+} from "@/sections/popular-searches";
 
 import popularSearches from "@/mocks/popular-searches.json";
 
