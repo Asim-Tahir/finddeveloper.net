@@ -39,7 +39,7 @@ dependencies:
     specifier: 1.68.0
     version: 1.68.0
   swiper:
-    specifier: ^10.3.1
+    specifier: 10.3.1
     version: 10.3.1
   typescript:
     specifier: 5.2.2
