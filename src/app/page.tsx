@@ -1,4 +1,4 @@
-import styles from "./page.module.scss";
+import "./page.scss";
 
 import Hero from "@/sections/hero";
 import PopularSearches, {
@@ -14,7 +14,7 @@ import featuredJobPostings from "@/mocks/featured-job-postings.json";
 
 export default function HomePage() {
   return (
-    <main className={styles.main}>
+    <main className="homepage">
       <Hero />
       <PopularSearches
         title="Popüler aramalar"
