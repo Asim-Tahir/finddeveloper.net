@@ -13,6 +13,17 @@ import { fileURLToPath, URL } from "url";
  */
 const nextConfig = {
   reactStrictMode: false,
+  /**
+   * @param {import("webpack").Configuration} config
+   * @returns {import("webpack").Configuration}
+   */
+  webpack: (config) => {
+    config.resolve.alias = {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    };
+
+    return config;
+  },
 };
 
 export default nextConfig;
