@@ -12,3 +12,10 @@ a {
 :focus-visible {
   outline: none;
 }
+
+/**
+ * Calculate spacing with border, margin and padding.
+ */
+* {
+  box-sizing: border-box;
+}
