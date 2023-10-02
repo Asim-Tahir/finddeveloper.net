@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] - 2023-10-02
+
+### Features:
+
+- add `service` layer ([#15](https://github.com/Asim-Tahir/finddeveloper.net/issues/15))
+- add `job-postings` [API route](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) to use in `services`
+- share `job-postings` types globally
+- add [`ms`](https://github.com/vercel/ms) library to make milliseconds more readable
+
+### Refactors:
+
+- rename `job-postings` mock data
+- move `alt`(alternate text) field out of sampled img data in `job-postings` mock data
+- use `service` + [API route](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) instead of mock data from props in `job-postings` section
+
+
 ## [0.3.0] - 2023-10-01
 
 ### Features:
