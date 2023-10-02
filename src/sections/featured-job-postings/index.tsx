@@ -1,51 +1,29 @@
 "use client";
 
-import Image, {
-  unstable_getImgProps as getImgProps,
-  type StaticImageData,
-} from "next/image";
-
+import { useEffect, useState } from "react";
+import Image, { unstable_getImgProps as getImgProps } from "next/image";
 import clsx from "clsx";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Virtual } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/virtual";
 import "swiper/css/navigation";
 
+import { JobPostingsService } from "@/services";
 import "./styles.scss";
-import { useMemo } from "react";
 
-export interface JobPostingBrandLogoImageData
-  extends Omit<StaticImageData, "blurWidth" | "blurHeight"> {
-  alt: string;
-}
+export default function FeaturedJobPostingsSection() {
+  const [jobPostings, setJobPostings] = useState<Array<JobPostings.Record>>([]);
 
-export interface JobPostingBrand {
-  name: string;
-  logos: Record<"1x" | "2x" | "3x", JobPostingBrandLogoImageData>;
-}
-
-export interface JobPostingRecord {
-  id: string;
-  title: string;
-  brand: JobPostingBrand;
-}
-
-export interface FeaturedJobPostingsSectionProps {
-  jobPostings: Array<JobPostingRecord>;
-  duplicateCount?: number;
-}
-
-export default function FeaturedJobPostingsSection({
-  jobPostings,
-  duplicateCount = 2,
-}: FeaturedJobPostingsSectionProps) {
-  const duplicatedJobPostings = useMemo<Array<JobPostingRecord>>(
-    () =>
-      Array<Array<JobPostingRecord>>(duplicateCount).fill(jobPostings).flat(),
-    [jobPostings, duplicateCount]
-  );
+  useEffect(() => {
+    JobPostingsService.getList(2)
+      .then((data) => {
+        setJobPostings(data);
+      })
+      .catch((reason) => {
+        console.error(reason);
+      });
+  }, []);
 
   return (
     <section className="featured-job-postings">
@@ -74,12 +52,12 @@ export default function FeaturedJobPostingsSection({
           },
         }}
       >
-        {duplicatedJobPostings.map((jobPosting, index) => (
+        {jobPostings?.map((jobPosting, index) => (
           <SwiperSlide key={jobPosting.id} virtualIndex={index}>
             {(_slideData) => {
               const { props: img1xProps } = getImgProps({
                 src: jobPosting.brand.logos["1x"].src,
-                alt: jobPosting.brand.logos["1x"].alt,
+                alt: jobPosting.brand.logos.alt,
                 width: jobPosting.brand.logos["1x"].width,
                 height: jobPosting.brand.logos["1x"].height,
                 blurDataURL: jobPosting.brand.logos["1x"].blurDataURL,
@@ -87,7 +65,7 @@ export default function FeaturedJobPostingsSection({
 
               const { props: source2xProps } = getImgProps({
                 src: jobPosting.brand.logos["2x"].src,
-                alt: jobPosting.brand.logos["2x"].alt,
+                alt: jobPosting.brand.logos.alt,
                 width: jobPosting.brand.logos["2x"].width,
                 height: jobPosting.brand.logos["2x"].height,
                 blurDataURL: jobPosting.brand.logos["2x"].blurDataURL,
@@ -95,7 +73,7 @@ export default function FeaturedJobPostingsSection({
 
               const { props: source3xProps } = getImgProps({
                 src: jobPosting.brand.logos["3x"].src,
-                alt: jobPosting.brand.logos["3x"].alt,
+                alt: jobPosting.brand.logos.alt,
                 width: jobPosting.brand.logos["3x"].width,
                 height: jobPosting.brand.logos["3x"].height,
                 blurDataURL: jobPosting.brand.logos["3x"].blurDataURL,
@@ -133,7 +111,7 @@ export default function FeaturedJobPostingsSection({
                     <Image
                       className="featured-job-postings__image"
                       {...img1xProps}
-                      alt={jobPosting.brand.logos["1x"].alt}
+                      alt={jobPosting.brand.logos.alt}
                     />
                   </picture>
                 </>
