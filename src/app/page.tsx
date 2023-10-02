@@ -1,5 +1,3 @@
-import "./page.scss";
-
 import Hero from "@/sections/hero";
 import PopularSearches, {
   type PopularSearchRecord,
@@ -11,6 +9,8 @@ import ActionCards from "@/sections/action-cards";
 
 import popularSearches from "@/mocks/popular-searches.json";
 import featuredJobPostings from "@/mocks/featured-job-postings.json";
+
+import "./page.scss";
 
 export default function HomePage() {
   return (
