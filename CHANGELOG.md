@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2023-10-03
+
+### Features:
+
+- add [`redux`](https://github.com/reduxjs/redux) and [`react-redux`](https://github.com/reduxjs/react-redux) with [`redux-thunk`](https://github.com/reduxjs/redux-thunk) ([#17](https://github.com/Asim-Tahir/finddeveloper.net/issues/17))
+
 ## [0.4.0] - 2023-10-02
 
 ### Features:
