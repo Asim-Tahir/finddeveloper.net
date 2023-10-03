@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.0] - 2023-10-04
+
+### Features:
+
+- add `user` store for global authorization
+- add `/api/login` route handler
+- add `service` for json placeholder's `/users/:id/` endpoint
+- add `user` service for authorization
+
+### Refactors:
+
+- combine `counter` store actions as all-in-one
+- use `user` store in `hero` section
+
 ## [0.5.0] - 2023-10-03
 
 ### Features:
