@@ -1,2 +1,2 @@
 export { default as counterReducer, initialCounterState } from "./reducer";
-export * from "./actions";
+export { default as counterActions } from "./actions";
