@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <img width="356" src="https://private-user-images.githubusercontent.com/29407019/272414679-9da70ca4-f74b-4e4c-b188-b49e8f28e1a3.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE2OTYzNzMwOTEsIm5iZiI6MTY5NjM3Mjc5MSwicGF0aCI6Ii8yOTQwNzAxOS8yNzI0MTQ2NzktOWRhNzBjYTQtZjc0Yi00ZTRjLWIxODgtYjQ5ZThmMjhlMWEzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEwMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMDAzVDIyMzk1MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ2NGJhNzg2YWIwNzA5YjNjNzkyNGZmY2M1ZjcwY2JiZTQ1ZGI3OTA4MzUxOWJhNGFiMGYzOTYzNDkwMWVmODQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.GuQsCzWagLnyN2YOMTO1zr3NzBKjjE6Y2JNbIqed_Yg" alt="finddeveloper.net brand logo"/>
+</p>
 
-## Getting Started
+<p align="center">
+  <code>finddeveloper.net</code> is a platform that connects talented software developers and other IT professionals with employers.
+</p>
+<p align="center">
+ This is a <a href="https://nextjs.org/">Next.js</a> project bootstrapped with <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-apphttps://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a>.
+</p>
 
-First, run the development server:
+<p align="center">
+  <a href="https://github.com/Asim-Tahir/finddeveloper.net/issues/new?assignees=&labels=Bug&assignees=Asim-Tahir&title=">Report Bug</a>
+  &nbsp;•&nbsp;
+  <a href="https://github.com/Asim-Tahir/finddeveloper.net/issues/new?assignees=&labels=Feature&assignees=Asim-Tahir&title=">Request Feature</a>
+</p>
+
+## Installation
+
+### 1. Clone repo in your local machine
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Asim-Tahir/finddeveloper.net.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+git clone git@github.com:Asim-Tahir/finddeveloper.net
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+gh repo clone Asim-Tahir/finddeveloper.net
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 2. Install dependencies
 
-## Learn More
+> [!WARNING]
+> This project uses [pnpm](https://pnpm.io/installation#using-corepack) to manage dependencies. Please make sure you have `pnpm` installed.
 
-To learn more about Next.js, take a look at the following resources:
+Enable non `built-in` package manager to without install globally.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+corepack enable
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<br/>
 
-## Deploy on Vercel
+Install dependencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 3. Run the app
+
+```bash
+pnpm dev
+```
