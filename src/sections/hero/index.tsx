@@ -1,5 +1,9 @@
 "use client";
 
+import { useCallback, useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "@/hooks";
+import { counterRandomizeAction } from "@/store";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,6 +16,28 @@ import heroSearchButtonIcon from "@/assets/svgs/hero-search-button-icon.svg";
 import heroSearchInputIcon from "@/assets/svgs/hero-search-input-icon.svg";
 
 export default function HeroSection(): JSX.Element {
+  const dispatch = useAppDispatch();
+  const count = useAppSelector((state) => state.counter.value);
+
+  const randomizeCounter = useCallback(
+    () => dispatch(counterRandomizeAction()),
+    [dispatch]
+  );
+  const increaseCounter = useCallback(
+    () => dispatch({ type: "counter/increment" }),
+    [dispatch]
+  );
+
+  useEffect(() => {
+    (async () => {
+      await randomizeCounter();
+
+      setTimeout(() => {
+        increaseCounter();
+      }, 1000);
+    })();
+  }, [randomizeCounter, increaseCounter]);
+
   function onSearchFormSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -38,6 +64,8 @@ export default function HeroSection(): JSX.Element {
     >
       <div className={styles.hero}>
         <header className={styles.heroHeader}>
+          Counter: {count}
+          <br />
           <Link className={styles.heroAuthButton} href="/profile">
             Kayıt Ol
           </Link>
