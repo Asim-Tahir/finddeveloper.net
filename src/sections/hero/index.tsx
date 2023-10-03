@@ -1,11 +1,12 @@
 "use client";
 
 import { useCallback, useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "@/hooks";
-import { counterRandomizeAction } from "@/store";
 
 import Image from "next/image";
 import Link from "next/link";
+
+import { userActions } from "@/store";
+import { useAppDispatch, useAppSelector } from "@/hooks";
 
 import styles from "./styles.module.scss";
 
@@ -17,26 +18,20 @@ import heroSearchInputIcon from "@/assets/svgs/hero-search-input-icon.svg";
 
 export default function HeroSection(): JSX.Element {
   const dispatch = useAppDispatch();
-  const count = useAppSelector((state) => state.counter.value);
 
-  const randomizeCounter = useCallback(
-    () => dispatch(counterRandomizeAction()),
-    [dispatch]
-  );
-  const increaseCounter = useCallback(
-    () => dispatch({ type: "counter/increment" }),
+  const user = useAppSelector((state) => state.user);
+
+  const login = useCallback(
+    ({ username, password }: ReduxStore.UserStore.LoginActionPayload) =>
+      dispatch(userActions.login({ username, password })),
     [dispatch]
   );
 
   useEffect(() => {
     (async () => {
-      await randomizeCounter();
-
-      setTimeout(() => {
-        increaseCounter();
-      }, 1000);
+      await login({ username: "forem", password: "dipsum" });
     })();
-  }, [randomizeCounter, increaseCounter]);
+  }, [login]);
 
   function onSearchFormSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -64,14 +59,18 @@ export default function HeroSection(): JSX.Element {
     >
       <div className={styles.hero}>
         <header className={styles.heroHeader}>
-          Counter: {count}
-          <br />
-          <Link className={styles.heroAuthButton} href="/profile">
-            Kayıt Ol
-          </Link>
-          <Link className={styles.heroAuthButton} href="/profile">
-            Giriş Yap
-          </Link>
+          {user?.loggedIn ? (
+            <Link href="/profile">Merhaba, {user.currentUser.name}</Link>
+          ) : (
+            <>
+              <Link className={styles.heroAuthButton} href="/register">
+                Kayıt Ol
+              </Link>
+              <Link className={styles.heroAuthButton} href="/login">
+                Giriş Yap
+              </Link>
+            </>
+          )}
         </header>
 
         <Link href="/" className={styles.heroLogoLink}>
