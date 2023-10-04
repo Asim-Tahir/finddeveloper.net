@@ -1,7 +1,5 @@
 import "@/assets/styles/globals.scss";
 
-import Footer from "@/partials/footer";
-
 import { ReduxProvider } from "@/store";
 import { markPro } from "@/assets/fonts";
 
@@ -17,8 +15,6 @@ export default function RootLayout({ children }: NextLayoutProps): JSX.Element {
     <html lang="tr">
       <body className={markPro.className}>
         <ReduxProvider>{children}</ReduxProvider>
-
-        <Footer />
       </body>
     </html>
   );
