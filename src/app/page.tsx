@@ -4,6 +4,7 @@ import PopularSearches, {
 } from "@/sections/popular-searches";
 import FeaturedJobPostings from "@/sections/featured-job-postings";
 import ActionCards from "@/sections/action-cards";
+import JointEmployers from "@/sections/joint-employers";
 
 import popularSearches from "@/mocks/popular-searches.json";
 
@@ -19,6 +20,7 @@ export default function HomePage() {
       />
       <FeaturedJobPostings />
       <ActionCards />
+      <JointEmployers/>
     </main>
   );
 }
