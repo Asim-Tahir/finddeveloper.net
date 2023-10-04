@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.0] - 2023-10-04
+
+### Features:
+
+- add `footer` partial by @Asim-Tahir in [#23](https://github.com/Asim-Tahir/finddeveloper.net/issues/23)
+- add `kettleman` color to use at `footer` by @Asim-Tahir
+- add missing background images into `homepage` by @Asim-Tahir [#25](https://github.com/Asim-Tahir/finddeveloper.net/issues/25)
+
+### Refactors:
+
+- use module css for `homepage` styles by @Asim-Tahir
+
 ## [0.7.0] - 2023-10-04
 
 ### Features:
