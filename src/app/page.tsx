@@ -6,6 +6,8 @@ import FeaturedJobPostings from "@/sections/featured-job-postings";
 import ActionCards from "@/sections/action-cards";
 import JointEmployers from "@/sections/joint-employers";
 
+import Footer from "@/partials/footer";
+
 import popularSearches from "@/mocks/popular-searches.json";
 
 import "./page.scss";
@@ -20,7 +22,9 @@ export default function HomePage() {
       />
       <FeaturedJobPostings />
       <ActionCards />
-      <JointEmployers/>
+      <JointEmployers />
+
+      <Footer />
     </main>
   );
 }
