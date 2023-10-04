@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.0] - 2023-10-04
+
+### Features:
+
+- add `joint-employers` section ([#20](https://github.com/Asim-Tahir/finddeveloper.net/issues/20))
+
+### Fixes:
+
+- Horizontal overflow issue at `popular-searches` on tablet screen sizes ([#22](https://github.com/Asim-Tahir/finddeveloper.net/issues/22))
+
 ## [0.6.0] - 2023-10-04
 
 ### Features:
