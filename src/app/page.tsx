@@ -10,11 +10,11 @@ import Footer from "@/partials/footer";
 
 import popularSearches from "@/mocks/popular-searches.json";
 
-import "./page.scss";
+import styles from "./page.module.scss";
 
 export default function HomePage() {
   return (
-    <main className="homepage">
+    <main className={styles.homepage}>
       <Hero />
       <PopularSearches
         title="Popüler aramalar"
